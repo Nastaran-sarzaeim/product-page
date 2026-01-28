@@ -1,0 +1,108 @@
+.footer {
+    background-color: var(--background);
+    padding: 40px 24px;
+    border-top: 1px solid #e5e7eb;
+    text-align: right;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: start;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* -------- Sections -------- */
+.title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.linkList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.linkList li {
+    cursor: pointer;
+    transition: color 0.2s ease;
+    list-style: none;
+}
+
+.linkList li:hover {
+    color: #1f2937;
+}
+
+/* -------- Brand -------- */
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.address {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+/* -------- Newsletter -------- */
+.newsletter {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-text);
+}
+
+.input {
+    flex-grow: 1;
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    text-align: right;
+    padding: 8px;
+}
+
+.input::placeholder {
+    color: #6b7280;
+}
+
+.button {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: text-decoration 0.2s ease;
+    padding: 8px;
+    border: none;
+    background: none;
+}
+
+.button:hover {
+    text-decoration: underline;
+}
+
+/* -------- Footer Bottom -------- */
+.bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 24px;
+}

@@ -1,0 +1,87 @@
+/* -------- Container -------- */
+.container {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb; 
+    padding: 20px;
+  }
+  
+  .card {
+    max-width: 450px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /* -------- Inputs -------- */
+  .input {
+    width: 100%;
+    border: 1px solid #d1d5db; 
+    border-radius: 12px;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: var(--color-pink-light); 
+    box-shadow: 0 0 0 2px rgba(218, 98, 125, 0.2);
+  }
+  
+  /* -------- Password wrapper (for eye icon) -------- */
+  .passwordWrapper {
+    position: relative;
+  }
+  
+  /* -------- Button -------- */
+  .button {
+    width: 100%;
+    background-color: var(--color-pink); 
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--color-primary); 
+  }
+  
+  /* -------- Toggle mode text -------- */
+  .toggleText {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--color-pink);
+  }
+  
+  /* -------- Responsive -------- */
+  @media (max-width: 480px) {
+    .card {
+      padding: 16px;
+    }
+    .title {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+  }
+  

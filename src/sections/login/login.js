@@ -40,7 +40,7 @@ export default function Login() {
         lastName,
         username,
         password,
-        role: username === "nastaran" && password === "123456#" ? "admin" : "user",
+        role: "user",
         cart: []
       };
 

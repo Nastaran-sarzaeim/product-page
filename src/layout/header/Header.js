@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Header.module.css";
 import Image from "next/image";
+import { useUser } from "@/context/UserContext";
+import UserPanel from "./user-panel";
 
 const menuItems = [
     { name: "خانه", href: "/" },
@@ -15,6 +17,8 @@ const menuItems = [
 
 export default function Header() {
     const pathname = usePathname();
+    const { user } = useUser();
+
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -47,7 +51,11 @@ export default function Header() {
                 </ul>
 
                 <div className={styles.actions}>
-                    <Link href="/login" className={styles.authLink}>ورود / ثبت‌نام</Link>
+                    {!user && (
+                        <Link href="/login" className={styles.authLink}>ورود / ثبت‌نام</Link>
+                    )}
+
+                    {user && <UserPanel />}
 
                     {/* Cart */}
                     <div className={styles.cart}>

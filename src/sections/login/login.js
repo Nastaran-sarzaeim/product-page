@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import styles from "./login.module.css";
+import { useUser } from "@/context/UserContext";
 
 export default function Login() {
+  const { login } = useUser();
 
   const [mode, setMode] = useState("login"); 
 
@@ -43,6 +45,7 @@ export default function Login() {
       };
 
       localStorage.setItem("users", JSON.stringify([...users, newUser]));
+      login(newUser);
       alert("ثبت‌نام موفق! خوش آمدی")
       setTimeout(() => { window.location.href = "/"; }, 1000);
       return;
@@ -54,6 +57,7 @@ export default function Login() {
       return;
     }
 
+    login(foundUser);
     alert("ورود موفق! خوش آمدی")
     setTimeout(() => { window.location.href = "/"; }, 1000);
   };

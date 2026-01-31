@@ -32,8 +32,25 @@ export function UserProvider({ children }) {
     updateUser(updated);
   };
 
+
+  const removeFromCart = (id, size, color) => {
+    if (!user || !user.cart) return;
+
+    const filtered = user.cart.filter(
+      (item) =>
+        !(
+          item.id === id &&
+          item.size === size &&
+          item.color === color
+        )
+    );
+
+    const updated = { ...user, cart: filtered };
+    updateUser(updated);
+  };
+
   return (
-    <UserContext.Provider value={{ user, login, logout, updateUser, updateCart }}>
+    <UserContext.Provider value={{ user, login, logout, updateUser, updateCart, removeFromCart }}>
       {children}
     </UserContext.Provider>
   );

@@ -17,19 +17,29 @@ export function formatPrice(price) {
 }
 
 export function parsePersianNumber(str) {
+  if (!str) return "0"; 
+
   const persianNumbers = "۰۱۲۳۴۵۶۷۸۹";
   const arabicNumbers = "٠١٢٣٤٥٦٧٨٩";
 
-  return str
+  return String(str)
     .split("")
-    .map(char => {
-      if (persianNumbers.indexOf(char) > -1) return persianNumbers.indexOf(char);
-      if (arabicNumbers.indexOf(char) > -1) return arabicNumbers.indexOf(char);
-      return char;
+    .map((c) => {
+      if (persianNumbers.includes(c))
+        return persianNumbers.indexOf(c);
+      if (arabicNumbers.includes(c))
+        return arabicNumbers.indexOf(c);
+      return c;
     })
     .join("");
 }
 
-export function parsePriceToNumber(str) {
-  return Number(parsePersianNumber(str));
+
+export function parsePriceToNumber(price) {
+  if (price == null) return 0;
+
+  const normalized = parsePersianNumber(price.toString())
+    .replace(/,/g, "");
+
+  return Number(normalized) || 0;
 }

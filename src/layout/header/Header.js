@@ -7,6 +7,7 @@ import styles from "./Header.module.css";
 import Image from "next/image";
 import { useUser } from "@/context/UserContext";
 import UserPanel from "./user-panel";
+import HoverCart from "./hover-cart";
 
 const menuItems = [
     { name: "خانه", href: "/" },
@@ -58,15 +59,7 @@ export default function Header() {
                     {user && <UserPanel />}
 
                     {/* Cart */}
-                    <div className={styles.cart}>
-
-                        <Image
-                            src='/icon/ic_bag.svg'
-                            alt="menu icon"
-                            width={24}
-                            height={24}
-                        />
-                    </div>
+                    <HoverCart />
 
                     {/* Mobile Menu */}
                     <div className={styles.hamburger}>

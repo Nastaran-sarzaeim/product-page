@@ -26,8 +26,14 @@ export function UserProvider({ children }) {
     setUser(updatedUser);
   };
 
+  const updateCart = (cart) => {
+    if (!user) return;
+    const updated = { ...user, cart };
+    updateUser(updated);
+  };
+
   return (
-    <UserContext.Provider value={{ user, login, logout, updateUser }}>
+    <UserContext.Provider value={{ user, login, logout, updateUser, updateCart }}>
       {children}
     </UserContext.Provider>
   );

@@ -1,0 +1,30 @@
+.wrapper {
+    margin: 0 40px 40px;
+}
+
+.empty {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

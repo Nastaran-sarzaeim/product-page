@@ -1,0 +1,23 @@
+.section {
+    padding: 40px 16px;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 40px 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+.descSection {
+    padding: 40px 16px;
+    border-bottom: 1px solid #9ca3af;
+}
+
+@media (min-width: 768px) {
+    .descSection {
+        padding: 40px 80px;
+    }
+}

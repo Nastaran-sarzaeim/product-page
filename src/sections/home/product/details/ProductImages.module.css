@@ -1,0 +1,27 @@
+.mainBox {
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.mainImage {
+    width: 100%;
+    /* height: auto; */
+    object-fit: cover;
+}
+
+.thumbRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.thumb {
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.thumbActive {
+    border-color: #111827;
+}

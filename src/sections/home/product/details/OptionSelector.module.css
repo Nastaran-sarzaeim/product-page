@@ -1,0 +1,58 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+}
+
+.sizeBtn {
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: .2s;
+    background: white;
+}
+
+.sizeBtn:hover {
+    background: #f3f4f6;
+}
+
+.sizeActive {
+    background: black;
+    color: white;
+}
+
+.sizeDisabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.colorDot {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 2px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorActive {
+    border-color: black;
+}
+
+.colorDisabled {
+    opacity: .5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,74 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 18px;
+    color: #374151;
+}
+
+.oldPrice {
+    font-size: 14px;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.desc {
+    line-height: 1.8;
+    color: #374151;
+}
+
+.cartRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btnAdd {
+    background: var(--color-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btnAdd:hover {
+    background: var(--color-pink);
+}
+
+.btnCircle {
+    border-radius: 999px;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.btnPlus {
+    background: #16a34a;
+}
+
+.btnPlus:hover {
+    background: #15803d;
+}
+
+.btnMinus {
+    background: #dc2626;
+}
+
+.btnMinus:hover {
+    background: #b91c1c;
+}
+
+.qty {
+    padding: 0 8px;
+}

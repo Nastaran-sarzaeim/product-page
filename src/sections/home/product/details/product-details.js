@@ -7,6 +7,7 @@ import ProductDescription from "./product-description";
 import ProductImages from "./product-image";
 import ProductInfo from "./product-info";
 import styles from "./ProductDetails.module.css";
+import ProductComments from "../comments/product-comments";
 
 export default function ProductDetails() {
     const { id } = useParams();
@@ -52,6 +53,10 @@ export default function ProductDetails() {
 
             <section className={styles.descSection}>
                 <ProductDescription product={product} />
+            </section>
+
+            <section className={styles.descSection}>
+                <ProductComments productId={product.id} />
             </section>
         </>
     );
